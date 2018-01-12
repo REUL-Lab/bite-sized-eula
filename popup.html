@@ -1,0 +1,94 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <style type="text/css">
+      body {
+        margin: 10px;
+        white-space: nowrap;
+        /*border-radius: 25px;*/
+      }
+
+      div {
+        border: 2px solid #114377;
+        padding: 1px 1px;
+        background: #32A4FA; /*#FFFFFF;*/
+        width: 200px;
+        border-radius: 25px;
+      }
+
+      h1 {
+        font-size: 15px;
+      }
+
+      #container {
+        align-items: center;
+        /*display: flex;*/
+        display: block;
+        justify-content: space-between;
+      }
+
+      .button {
+        background-color: #FFFFFF;/*#32A4FA;*/
+        border: 2px solid #114377;
+        color: black;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        /*display: inline-block;*/
+        display: block;
+        font-size: 11px;
+        font-family: "Courier New";
+        font-weight: bold;
+        /*margin: 4px 2px;*/
+        margin: 0 auto;
+        cursor: pointer;
+        width: 96%;
+        cursor: pointer;
+      }
+
+      .button1 {border-radius: 12px;}
+
+      .button:hover {background-color: #FFFFFF/*#32A4FA*/;}
+
+      .button:active {
+        background-color: #FFFFFF/*#32A4FA*/;
+        box-shadow: 0 5px #114377;
+        transform: translateY(4px);
+      }
+
+
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+    -->
+    <script src="popup.js"></script>
+	<link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="menu">
+    <h1 style="font-family: Courier New; font-weight: bold; text-align: center; font-size: 20px">Bite-Sized EULA</h1>
+    <div id="container">
+    <p>
+      <button type="button" class="button button1">Pause Bite-sized EULA</button>
+      <br><button type="button" class="button button1">Don't run on this website</button>
+      <br><button type="button" class="button button1">About and Help</button>
+      <br><button type="button" class="button button1">Recommend to a friend!</button>
+      <br><button type="button" class="button button1">Donate!</button>
+      <br><button type="button" class="button button1">Advanced Settings</button>
+      <!--<br><button type="button" id="test-pop-up" class="menu-button">Test Pop Up Window</button>-->
+      <br><button type="button" class="button button1">Uninstall</button>
+    </p>
+    </div>
+
+  </body>
+</html>

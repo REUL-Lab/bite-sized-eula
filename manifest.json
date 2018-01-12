@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "Bite-Sized EULA",
+  "description": "This extension allows the user to be reminded of relevant sections of the End User License Agreements while they are using a web application.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon3.png",
+    "default_popup": "popup.html",
+    "default_title": "Click here to update the settings of the Bite-Sized EULA Chrome Extension."
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}
