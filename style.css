@@ -8,3 +8,7 @@
   padding: 5px;
   margin-top: 10px;
 }
+
+span, input {
+    margin: 5px;
+}

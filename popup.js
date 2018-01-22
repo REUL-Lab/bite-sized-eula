@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function handler() {
 	var modal = document.getElementById('myModal');
-    modal.style.display = "block";
+    //modal.style.display = "block";
 }
 
 window.onload = function() {
