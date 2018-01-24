@@ -162,3 +162,12 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+window.addEventListener('DOMContentLoaded', function() {
+    // your button here
+    var link = document.getElementById('settings-b');
+    // onClick's logic below:
+    link.addEventListener('click', function() {
+        window.open(chrome.extension.getURL("settings.html"), '_blank');
+    });
+});
