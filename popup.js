@@ -2,6 +2,8 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+
+var status = 0;
 /**
  * Get the current URL.
  *
@@ -62,6 +64,20 @@ function changeBackgroundColor(color) {
   chrome.tabs.executeScript({
     code: script
   });
+}
+
+function buttonPlayPress() {
+    if(status == 0 || status == 2)
+  {     
+    if(status == 0) 
+    
+    $("#play").attr("class","glyphicon glyphicon-pause aligned")
+    status = 1;
+  } else if(status == 1) {    
+    
+    $("#play").attr("class","glyphicon glyphicon-play aligned")
+    status = 2;
+  }
 }
 
 /**
