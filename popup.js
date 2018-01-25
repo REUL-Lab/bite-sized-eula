@@ -65,19 +65,33 @@ function changeBackgroundColor(color) {
     code: script
   });
 }
+$(document).ready(function() {
+  document.getElementById("pausePlay").addEventListener('click', buttonPlayPress);
+});
 
 function buttonPlayPress() {
     if(status == 0 || status == 2)
-  {     
-    if(status == 0) 
-    
+  {
+    if(status == 0)
+
     $("#play").attr("class","glyphicon glyphicon-pause aligned")
     status = 1;
-  } else if(status == 1) {    
-    
+  } else if(status == 1) {
+
     $("#play").attr("class","glyphicon glyphicon-play aligned")
     status = 2;
   }
+
+   $(this).find('span').toggleClass('glyphicon-play').toggleClass('glyphicon-pause')
+   .promise().done(function() {
+      console.log($(this)[0].className);
+       if($(this)[0].className === 'glyphicon glyphicon-pause') {
+         document.getElementById('msg').innerHTML = '<font size="4" color="grey">Bite-Sized EULA is enabled</font>'
+       }
+       if($(this)[0].className === 'glyphicon glyphicon-play') {
+         document.getElementById('msg').innerHTML = '<font size="4" color="grey">Bite-Sized EULA is disabled</font>'
+       }
+   });
 }
 
 /**
