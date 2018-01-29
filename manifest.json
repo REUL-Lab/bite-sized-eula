@@ -14,5 +14,11 @@
     "activeTab",
     "storage",
     "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://www.instagram.com/","https://www.instagram.com/","https://www.instagram.com/*","http://www.instagram.com/*"],
+      "js": ["lib/jquery-3.3.1.min.js", "notification_inject.js"]	  
+    }
   ]
 }
