@@ -179,9 +179,9 @@ window.onclick = function(event) {
 
 window.addEventListener('DOMContentLoaded', function() {
     // your button here
-    var link = document.getElementById('settings-b');
+    var link = document.getElementById('advancedsettings');
     // onClick's logic below:
     link.addEventListener('click', function() {
-        window.open(chrome.extension.getURL("settings.html"), '_blank');
+        window.open(chrome.extension.getURL("advancedSettings.html"), '_blank');
     });
 });
