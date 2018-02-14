@@ -14,5 +14,15 @@
     "activeTab",
     "storage",
     "tabs"
-  ]
+  ],
+  "background": {
+      "page": "modal.html",
+      "css": ["notification_popup.css"],
+      "persistent": false
+  },
+  "content_scripts": [{
+      "matches": ["<all_urls>"],
+      "css": ["notification_popup.css"],
+      "js": ["jquery.min.js", "notification_popup.js"]
+  }]
 }
