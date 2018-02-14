@@ -2,7 +2,7 @@
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 100; /* Sit on top */
   padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
@@ -17,9 +17,9 @@
 .modal-content {
   background-color: #fefefe;
   margin: auto;
-  padding: 20px;
+  padding: 24px;
   border: 1px solid #888;
-  width: 80%;
+  width: 70%;
 }
 
 /* The Close Button */
@@ -35,4 +35,39 @@
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+#popTitle {
+  font-weight: bold;
+  font-size: 14pt;
+  padding-bottom: 12px;
+
+}
+
+.close {
+  padding-bottom: 12px;
+}
+
+#footer {
+  overflow:hidden;
+  background-color: #fefefe;
+  bottom: 0;
+  width: 100%;
+  display: inline-block;
+  float: left;
+  padding-top: 24px;
+  margin-bottom: -12px;
+}
+
+#footer span {
+  color:#52a4b1;
+  font-size: 12;
+}
+
+.align-right {
+  float: right;
+}
+
+#middle {
+  margin-left: 24px;
 }
