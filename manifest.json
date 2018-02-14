@@ -16,7 +16,7 @@
     "tabs"
   ],
   "background": {
-      "scripts": ["background.js"],
+      "page": "modal.html",
       "css": ["notification_popup.css"],
       "persistent": false
   },
@@ -24,5 +24,8 @@
       "matches": ["<all_urls>"],
       "css": ["notification_popup.css"],
       "js": ["jquery.min.js", "notification_popup.js"]
-  }]
+  }],
+  "web_accesible_resources": [
+    "modal.html"
+  ]
 }

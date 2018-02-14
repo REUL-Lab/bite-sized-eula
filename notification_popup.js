@@ -15,19 +15,18 @@ document.addEventListener('click', function(e) {
     var elements = document.getElementsByClassName('_9mno0 _ov9ai');
     var modal = document.getElementById('myModal');
     var span = document.getElementsByClassName("close")[0];
+    var signUpElement = elements[1].childNodes[0];
+    signUpElement.onclick = function() {
+        modal.style.display="block";
+    }
 
-    if(elements[1].childNodes[0].innerText == target.innerText) {
-      target.onclick = function() {
-          modal.style.display="block";
-      }
-      span.onclick = function() {
-          modal.style.display = "none";
-      }
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-          if (event.target == modal) {
-              modal.style.display = "none";
-          }
-      }
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
     }
 }, false);
