@@ -4,6 +4,17 @@
 
 
 var status = 0;
+chrome.storage.sync.get('state', function(data) {
+         if (data.state === 'on') {
+            document.getElementById('msg').innerHTML = '<font size="4" color="grey">Bite-Sized EULA is enabled</font>'
+            document.getElementById('pausePlayIcon').className = 'glyphicon glyphicon-pause'
+
+         } else {
+            document.getElementById('msg').innerHTML = '<font size="4" color="grey">Bite-Sized EULA is disabled</font>'
+            document.getElementById('pausePlayIcon').className = 'glyphicon glyphicon-play'
+         }
+});
+
 /**
  * Get the current URL.
  *
@@ -70,28 +81,17 @@ $(document).ready(function() {
 });
 
 function buttonPlayPress() {
-    if(status == 0 || status == 2)
-  {
-    if(status == 0)
-
-    $("#play").attr("class","glyphicon glyphicon-pause aligned")
-    status = 1;
-  } else if(status == 1) {
-
-    $("#play").attr("class","glyphicon glyphicon-play aligned")
-    status = 2;
-  }
-
-   $(this).find('span').toggleClass('glyphicon-play').toggleClass('glyphicon-pause')
-   .promise().done(function() {
-      console.log($(this)[0].className);
-       if($(this)[0].className === 'glyphicon glyphicon-pause') {
-         document.getElementById('msg').innerHTML = '<font size="4" color="grey">Bite-Sized EULA is enabled</font>'
-       }
-       if($(this)[0].className === 'glyphicon glyphicon-play') {
-         document.getElementById('msg').innerHTML = '<font size="4" color="grey">Bite-Sized EULA is disabled</font>'
-       }
-   });
+   chrome.storage.sync.get('state', function(data) {
+         if (data.state === 'on') {
+           chrome.storage.sync.set({state: 'off'});
+           document.getElementById('msg').innerHTML = '<font size="4" color="grey">Bite-Sized EULA is disabled</font>'
+           document.getElementById('pausePlayIcon').className = 'glyphicon glyphicon-play'
+         } else {
+           chrome.storage.sync.set({state: 'on'});
+           document.getElementById('msg').innerHTML = '<font size="4" color="grey">Bite-Sized EULA is enabled</font>'
+           document.getElementById('pausePlayIcon').className = 'glyphicon glyphicon-pause'
+         }
+    });
 }
 
 /**

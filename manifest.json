@@ -16,9 +16,8 @@
     "tabs"
   ],
   "background": {
-      "page": "modal.html",
       "css": ["notification_popup.css"],
-      "persistent": false
+      "script": "background.js"
   },
   "content_scripts": [{
       "matches": ["<all_urls>"],
