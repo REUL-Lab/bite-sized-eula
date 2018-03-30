@@ -22,6 +22,10 @@
   "content_scripts": [{
       "matches": ["<all_urls>"],
       "css": ["notification_popup.css"],
-      "js": ["jquery.min.js", "notification_popup.js"]
-  }]
+      "js": ["jquery.min.js", "notification_popup.js", "database.js"]
+  }],
+  "web_accessible_resources": [
+	  "/data/sites.json",
+	  "/data/eulas/test.json"
+  ]
 }
