@@ -66,8 +66,21 @@
 
 .align-right {
   float: right;
+  margin-left: 24px;
 }
 
-#middle {
+/*#middle {
   margin-left: 24px;
+}*/
+
+
+.button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color:#52a4b1;
+    font-size: 12;
 }
