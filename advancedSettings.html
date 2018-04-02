@@ -48,7 +48,7 @@
 								<div class="mkdf-membership-dashboard-nav-holder clearfix">
 									<ul class="mkdf-membership-dashboard-nav clearfix">
 										<li>
-											<a href="#">
+											<a href="#" id="donate_link">
 												<span class="mkdf-dash-icon">
 													<i class="dripicons-heart" aria-hidden="true"></i>
 												</span>
@@ -56,7 +56,7 @@
 											</a>
 										</li>
 									<li>
-										<a href="#">
+										<a href="#" id="domain_link">
 											<span class="mkdf-dash-icon">
 												<i class="dripicons-document" aria-hidden="true"></i>					</span>
 												<span class="mkdf-dash-label">Domains</span>
@@ -76,6 +76,25 @@
 											<div class="mkdf-membership-dashboard-page">
 												<div class="mkdf-membership-dashboard-page-content">
 														<!-- Main Content  -->
+														<div id = "paypal" style="display:none;">
+															<h2 id="popTitle">Donate through Paypal!</h2>
+															<div id="message">
+													            <p>Click on the following button to donate to our organisation!</p>
+													        </div>
+															<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+												            <input type="hidden" name="cmd" value="_s-xclick">
+												            <input type="hidden" name="hosted_button_id" value="93AQ9FTYCQ2D4">
+												            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+												            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+												            </form>
+												        </div>
+
+												        <div id = "domains" style="display:none;">
+															<h2 id="popTitle">Bite-Sized-Eula is running on the following web applications...</h2>
+															<div id="message">
+													            <p>https://www.instagram.com/</p>
+													        </div>
+												        </div>
 												</div>
 											</div>
 										</div>
