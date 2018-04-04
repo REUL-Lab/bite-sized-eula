@@ -2,15 +2,15 @@
     "sites": [
         {
 			"name" : "test",
-			"domains" : ["http://testsite.com", "http://www.testsite.com"]
+			"domains" : ["www.testsite.com"]
 		},
         {
 			"name" : "instagram",
-			"domains" : ["http://instagram.com", "http://www.instagram.com"]
+			"domains" : ["www.instagram.com", "instagram.com"]
 		},
         {
 			"name" : "reddit",
-			"domains" : ["http://reddit.com", "http://www.reddit.com"]
+			"domains" : ["reddit.com", "www.reddit.com"]
 		} 
     ]
 }

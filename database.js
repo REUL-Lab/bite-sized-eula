@@ -14,7 +14,9 @@ window.onload = function(){
 }
 
 function getEulaSectionForTag(siteDomain, tag, callback){
+	console.log("Sanity check.");
 	siteDomain = siteDomain.toLowerCase();
+	tag = tag.toLowerCase();
 	getEulaByDomain(siteDomain, function(eula){
 		if(eula == null){
 			callback(null);

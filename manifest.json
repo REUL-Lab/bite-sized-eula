@@ -26,6 +26,7 @@
   }],
   "web_accessible_resources": [
 	  "/data/sites.json",
-	  "/data/eulas/test.json"
+	  "/data/eulas/test.json",
+	  "/data/eulas/*"
   ]
 }
