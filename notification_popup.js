@@ -41,6 +41,7 @@ function updateModal(innerText){
 window.onload = function(){
 	signUpElement.onclick = function(event) {
 	    console.log("Clicked!")
+	    //Check state of plugin to decide whether to display the pop-up or not.
 		chrome.storage.sync.get('state', function(data) {
 			if (data.state === 'on') {
 				modal.style.display= "block";
@@ -51,6 +52,7 @@ window.onload = function(){
 	var modal = document.getElementById('myModal');
     var span = document.getElementsByClassName("close")[0];
 	span.onclick = function() {
+	    //Check state of plugin to decide whether to display the pop-up or not.
         chrome.storage.sync.get('state', function(data) {
 			if (data.state === 'on') {
 				modal.style.display = "none";
@@ -60,6 +62,7 @@ window.onload = function(){
 
     window.onclick = function(event) {
 		if (event.target == modal) {
+		    //Check state of plugin to decide whether to display the pop-up or not.
 			chrome.storage.sync.get('state', function(data) {
 				if (data.state === 'on') {
 					modal.style.display = "none";
@@ -69,27 +72,27 @@ window.onload = function(){
 	}
 }
 document.addEventListener('click', function(e) {
-	chrome.storage.sync.get('state', function(data) {
-            if (data.state === 'on') {
-	        event = e || window.event;
+	    event = e || window.event;
 		var target = e.target || e.srcElement;
 		var tag = target.textContent;
 		console.log("Got click on tag " + tag);
 		var domain = window.location.host;
 		console.log("Got host " + domain)
-		getEulaSectionForTag(domain, tag, function(eulaText){
-			if(eulaText != null){
-				//there is a eula text section! Good.
-				console.log("Got EULA for tag " + tag + " on domain " + domain);
-				event.stopPropagation();
-				updateModal(eulaText);
-				var modal = document.getElementById('myModal');
-				modal.style.display="block"
-			} else {
-				console.log("Unable to find EULA for tag " + tag + " on domain " + domain);
-			}
-		});
-	    }
-	}
-
+		//Check state of plugin to decide whether to display the pop-up or not.
+		chrome.storage.sync.get('state', function(data) {
+        	if (data.state === 'on') {
+        		getEulaSectionForTag(domain, tag, function(eulaText){
+                	if(eulaText != null){
+                		//there is a eula text section! Good.
+                		console.log("Got EULA for tag " + tag + " on domain " + domain);
+                		event.stopPropagation();
+                		updateModal(eulaText);
+                		var modal = document.getElementById('myModal');
+                		modal.style.display="block"
+                	} else {
+                		console.log("Unable to find EULA for tag " + tag + " on domain " + domain);
+                	}
+                });
+        	}
+        });
 }, false);

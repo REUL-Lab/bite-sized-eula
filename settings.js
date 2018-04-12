@@ -1,3 +1,5 @@
+//This file contains all the backed code for the advanced settings page.
+
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('uninstall_link').addEventListener('click', function() {
         chrome.tabs.update({ url: 'chrome://extensions' });
