@@ -69,23 +69,27 @@ window.onload = function(){
 	}
 }
 document.addEventListener('click', function(e) {
-	event = e || window.event;
-	var target = e.target || e.srcElement;
-	var tag = target.textContent;
-	console.log("Got click on tag " + tag);
-	var domain = window.location.host;
-	console.log("Got host " + domain)
-	getEulaSectionForTag(domain, tag, function(eulaText){
-		if(eulaText != null){
-			//there is a eula text section! Good.
-			console.log("Got EULA for tag " + tag + " on domain " + domain);
-			event.stopPropagation();
-			updateModal(eulaText);
-			var modal = document.getElementById('myModal');
-			modal.style.display="block"
-		} else {
-			console.log("Unable to find EULA for tag " + tag + " on domain " + domain);
-		}
-	});
+	chrome.storage.sync.get('state', function(data) {
+            if (data.state === 'on') {
+	        event = e || window.event;
+		var target = e.target || e.srcElement;
+		var tag = target.textContent;
+		console.log("Got click on tag " + tag);
+		var domain = window.location.host;
+		console.log("Got host " + domain)
+		getEulaSectionForTag(domain, tag, function(eulaText){
+			if(eulaText != null){
+				//there is a eula text section! Good.
+				console.log("Got EULA for tag " + tag + " on domain " + domain);
+				event.stopPropagation();
+				updateModal(eulaText);
+				var modal = document.getElementById('myModal');
+				modal.style.display="block"
+			} else {
+				console.log("Unable to find EULA for tag " + tag + " on domain " + domain);
+			}
+		});
+	    }
+	}
 
 }, false);
