@@ -4,11 +4,19 @@
 	"sections": [
         {
 			"text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-			"tags" : ["sign up"]
+			"tags" : ["sign up"],
+            "subtitle" : "Before you sign up",
+            "action" : "Sign-Up",
+            "type" : "click",
+            "neverremind" : "false"
 		},
         {
 			"text" : "This is another test section",
-			"tags" : ["test2", "testsection2"]
+			"tags" : ["add a comment…", "_bilrf"],
+            "subtitle" : "Before you comment…",
+            "action" : "Comment",
+            "type" : "enter",
+            "neverremind" : "false"
 		}
     ]
 }

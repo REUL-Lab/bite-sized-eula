@@ -11,6 +11,10 @@
         {
 			"name" : "reddit",
 			"domains" : ["reddit.com", "www.reddit.com"]
-		} 
+		},
+        {
+            "name" : "facebook",
+            "domains" : ["facebook.com", "www.facebook.com"]
+        }
     ]
 }

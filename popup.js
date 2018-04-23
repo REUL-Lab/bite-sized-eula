@@ -12,10 +12,14 @@ chrome.storage.sync.get('state', function(data) {
             document.getElementById('msg').innerHTML = '<font size="4" color="grey">Bite-Sized EULA is enabled</font>'
             document.getElementById('pausePlayIcon').className = 'glyphicon glyphicon-pause'
 
+
+
          } else {
             document.getElementById('msg').innerHTML = '<font size="4" color="grey">Bite-Sized EULA is disabled</font>'
             document.getElementById('pausePlayIcon').className = 'glyphicon glyphicon-play'
          }
+
+
 });
 
 
@@ -26,6 +30,8 @@ chrome.storage.sync.get('state', function(data) {
 $(document).ready(function() {
   document.getElementById("pausePlay").addEventListener('click', buttonPlayPress);
 });
+
+
 
 /**
  * Updates the state of the plugin and changes the menu as required.
@@ -42,6 +48,9 @@ function buttonPlayPress() {
            chrome.storage.sync.set({state: 'on'});
            document.getElementById('msg').innerHTML = '<font size="4" color="grey">Bite-Sized EULA is enabled</font>'
            document.getElementById('pausePlayIcon').className = 'glyphicon glyphicon-pause'
+
+           // var domain = window.location.host;
+           //  document.getElementById('web_track').innerHTML = '<p>on this website ' + domain + '</p>'
          }
     });
 }
