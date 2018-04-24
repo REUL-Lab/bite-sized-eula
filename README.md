@@ -4,15 +4,15 @@ Team 7349: Sahithi Puligundla Drew Polstra Shruti Mishra Michael Chen Swati Mard
 
 Release Notes Bite Sized EULA Version 1.0:
 New Features:
-  ● Added functionality for additional settings page
-  ● Added notification pop-up backend functionality
-  ● Added disable and enable functionality
-  ● Added the functionality for the comment, and comment and remind me again
+  - Added functionality for additional settings page
+  - Added notification pop-up backend functionality
+  - Added disable and enable functionality
+  - Added the functionality for the comment, and comment and remind me again
     options on notification pop up window
 Bug Fixes:
-  ● Notification Window pop-ups with the correct content
+  - Notification Window pop-ups with the correct content
 Known Bugs:
-  ● In order for the plugin to be enabled when first loading the application, the page must be refreshed after clicking play to enable the plugin. Note that this only happens the first time a user accesses Instagram after changing the status of the plugin
+  - In order for the plugin to be enabled when first loading the application, the page must be refreshed after clicking play to enable the plugin. Note that this only happens the first time a user accesses Instagram after changing the status of the plugin
 
 Install Guide:
 
