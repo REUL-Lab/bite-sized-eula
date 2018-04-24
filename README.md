@@ -1,5 +1,6 @@
-# eula
+# Bite - Sized - Eula
 Bite - Sized End User License Agreement (EULA) Customer Delivery Document
+
 Team 7349: Sahithi Puligundla, Drew Polstra, Shruti Mishra, Michael Chen, Swati Mardia
 
 **_Release Notes Bite Sized EULA Version 1.0:_**
@@ -21,23 +22,23 @@ Known Bugs:
 **_Install Guide:_**
 
 
-Download:
+_Download:_
 Download the entire repository from the team github repository using the “clone or download → download ZIP” button, or clone the repository using ordinary git practices.
 
-Build Instructions:
+_Build Instructions:_
 Chrome plugins do not require any building.
 
-Pre-requisites :
+_Pre-requisites:_
 The customer must have a Google Chrome Web Browser and a Google Account before they can install the Bite-Sized EULA Chrome Extension through the “Extensions” section of the Chrome Web Store. A Google Chrome Browser can be installed only in the following operating systems:  Linux - 60.0.3112.78, iOS - 60.0.3112.72, macOS - 60.0.3112.78, Android - 59.0.3071.125, and Windows - 60.0.3112.78.
 
-Dependencies:
+_Dependencies:_
 Download jQuery 3.3.1 library (see jquery.com/download/)
 
-Installation:
+_Installation:_
 In chrome, enter chrome://extensions where you would ordinarily enter a web address. This will take you to the chrome extension management page. Click “Load Unpacked” to load this unpacked (in progress) chrome extension. In the resulting file selection popup, navigate to the folder in which you unpacked the repository. Select this folder. The extension will load.
 
-Run Instructions:
+_Run Instructions:_
 Once the plugin is installed it will start itself by default. The plugin is paused by default, so to make it operate you must click on the plugin’s icon (near the top right of chrome) and press the play button.
 
-Troubleshooting:
+_Troubleshooting:_
 To get this extension running in incognito mode, go to chrome://extensions in normal browser mode and find Bite-Sized EULA. Then, click “Details” and enable “Allow in incognito”.
