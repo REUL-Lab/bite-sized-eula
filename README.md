@@ -2,7 +2,7 @@
 Bite - Sized End User License Agreement (EULA) Customer Delivery Document
 Team 7349: Sahithi Puligundla, Drew Polstra, Shruti Mishra, Michael Chen, Swati Mardia
 
-Release Notes Bite Sized EULA Version 1.0:
+**_Release Notes Bite Sized EULA Version 1.0:_**
 
 New Features:
   - Added functionality for additional settings page
@@ -18,7 +18,7 @@ Known Bugs:
   - In order for the plugin to be enabled when first loading the application, the page must be refreshed after clicking play to enable the plugin. Note that this only happens the first time a user accesses Instagram after changing the status of the plugin
 
 
-Install Guide:
+**_Install Guide:_**
 
 
 Download:
